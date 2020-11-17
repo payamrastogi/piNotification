@@ -2,10 +2,11 @@
 
 from pushbullet import Pushbullet
 import yaml
+import sys
 
 class PushNotification:
     def __init__(self):
-        with open("settings.yaml", 'r') as stream:
+        with open("/home/pi/workspace/piNotification/settings.yaml", 'r') as stream:
             try:
                 self.settings = yaml.safe_load(stream)
                 self.pushbullet = Pushbullet(self.settings['access_token'])
@@ -17,4 +18,4 @@ class PushNotification:
         self.device.push_note(notificationType, message)
 
 pushNotification = PushNotification()
-pushNotification.notify("Test", "Test Message")
+pushNotification.notify(sys.argv[1], sys.argv[2])
