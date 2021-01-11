@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 
 from pushbullet import Pushbullet
 import yaml
@@ -6,7 +6,7 @@ import sys
 
 class PushNotification:
     def __init__(self):
-        with open("/home/pi/workspace/piNotification/settings.yaml", 'r') as stream:
+        with open("/home/payam/Workspace/piNotification/settings.yaml", 'r') as stream:
             try:
                 self.settings = yaml.safe_load(stream)
                 self.pushbullet = Pushbullet(self.settings['access_token'])

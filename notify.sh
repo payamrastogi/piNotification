@@ -1,3 +1,3 @@
 #! /bin/bash
-source /home/pi/workspace/piNotification/venv/bin/activate
-python3 /home/pi/workspace/piNotification/pushNotification.py "test" "test"
+source /home/payam/Workspace/piNotification/venv/bin/activate
+python3 /home/payam/Workspace/piNotification/pushNotification.py "test" "test"
